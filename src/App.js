@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -9,3 +8,12 @@ function App() {
 }
 
 export default App;
+
+
+/*
+Genres
+Trending movies
+Search by string
+Discover - random movies by filters
+Movies - Top Rated, Now Playing, Latest, Upcoming, Popular
+*/
