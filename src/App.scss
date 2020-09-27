@@ -1,0 +1,23 @@
+@import './styles/variables.scss';
+
+.app-container {
+  margin: auto 15%;
+}
+
+@media #{$phones} {
+  .app-container {
+    margin: 0;
+  }
+
+}
+
+@media #{$tablet} {
+  .app-container {
+    margin: auto 7%;
+  }
+
+}
+
+.red {
+  color: red
+}

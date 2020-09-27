@@ -4,13 +4,26 @@
   "private": true,
   "homepage": "http://dimitranov.github.io/movie-bob",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.6.2",
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/redux-logger": "^3.0.8",
     "firebase": "^7.19.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-redux": "^7.1.9",
     "gh-pages": "^3.1.0"
   }
 }
