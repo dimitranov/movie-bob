@@ -12,6 +12,7 @@ export const CHANGE_SEARCH_TYPE = 'CHANGE_SEARCH_TYPE';
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const REGISTRATION_REQUEST = 'REGISTRATION_REQUEST';
 export const AUTH_ERROR = 'AUTH_ERROR';
+export const AUTH_ERROR_CLEAR = 'AUTH_ERROR_CLEAR';
 
 
 
@@ -60,7 +61,7 @@ export function onLoginRequest(loginData: BaseCredentials): (dispatch: Function)
     }
 }
 
-export function onRegistrationRequest(registrationData: BaseCredentials): (dispatch: Function) => any {
+export function onRegistrationRequest(registrationData: BaseCredentials): (dispatch: Function) => Promise<unknown> {
     return (dispatch: Function): Promise<unknown> => {
         return new Promise((resolve, reject) => {
             AuthService.Registrate(registrationData)
@@ -99,3 +100,8 @@ export function onLogoutRequest(): (dispatch: Function) => any {
         })
     }
 }
+
+export const clearAuthError = (): BaseAction => ({
+    type: AUTH_ERROR_CLEAR,
+    payload: false
+});

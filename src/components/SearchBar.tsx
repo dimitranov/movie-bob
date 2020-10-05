@@ -29,7 +29,7 @@ export const SearchBar = (props: SearchBarProps) => {
     }
 
     return (
-        <div>
+        <div className="search-bar-container">
             <select value={props.searchType} onChange={onTypeChange}>
                 {searchTypes.map((type) => <option value={type} key={type}>{type}</option>)}
             </select>

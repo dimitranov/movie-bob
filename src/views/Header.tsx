@@ -25,21 +25,29 @@ class Header extends Component<StateProps & DispathProps, {}> {
     }
 
     render() {
+
+        const authLink = this.props.userIsLogged ?
+            <button onClick={this._handleLogout}>LOGOUT</button> :
+            <Link to="/movie-bob/login" className="btn btn-primary">LOGIN</Link>
+
         return (
-            <div>
-                <Link to="/movie-bob/">HOME</Link>
-                <SearchBar
-                    onSearchTypeChange={this.props.onSearchTypeChange}
-                    onSearchValueChange={this.props.onSearchValueChange}
-                    searchValue={this.props.searchValue}
-                    searchType={this.props.searchType}
-                />
-                {
-                    this.props.userIsLogged ?
-                        <span onClick={this._handleLogout}>LOGOUT</span> :
-                        <Link to="/movie-bob/login">LOGIN</Link>
-                }
-            </div>
+            <header className="px-3 py-2">
+                <div className="header-item header-item-home-link">
+                    <Link to="/movie-bob/">HOME</Link>
+                </div>
+                <div className="header-item header-item-search-bar">
+                    <SearchBar
+                        onSearchTypeChange={this.props.onSearchTypeChange}
+                        onSearchValueChange={this.props.onSearchValueChange}
+                        searchValue={this.props.searchValue}
+                        searchType={this.props.searchType}
+                    />
+                </div>
+                <div className="header-item header-item-auth-link">
+                    {authLink}
+                </div>
+                <div className="clearfix"></div>
+            </header>
         )
     }
 }

@@ -14,7 +14,6 @@ const App = () => {
     <div className="app-container">
       <Switch>
         <Route exact path={"/movie-bob/"}>
-          <br />
           <Header />
           <Home />
         </Route>

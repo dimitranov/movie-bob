@@ -1,5 +1,9 @@
 @import './styles/variables.scss';
 
+html, body {
+  padding: 0;
+  margin: 0;
+}
 .app-container {
   margin: auto 15%;
 }
@@ -20,4 +24,37 @@
 
 .red {
   color: red
+}
+
+header {
+  box-shadow: 0 1px 3px #e1e1e1;
+  border-radius: 0 0 5px 5px;
+  background-color: rgb(248, 248, 248);
+}
+.page-container {
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-bar-container {
+  display: inline-block;
+}
+
+.header-item {
+  margin-right: 20px;
+  float: left;
+}
+.header-item-auth-link {
+  float: right;
+  margin-right: 0;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+}
+
+.header-item-auth-link:hover {
+  text-decoration: underline;
 }

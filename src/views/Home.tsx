@@ -13,7 +13,8 @@ type DispatchProps = {
 class Home extends Component<StateProps & DispatchProps, {}> {
     render() {
         return (
-            <div>
+            <div className="page-container">
+                <br />
                 HOME
             </div>
         )
