@@ -55,7 +55,7 @@ const Login = ({
             </div>
             <button type="submit" className="btn btn-primary">LOGIN</button>
             <br />
-            <Link to={'/movie-bob/login'}>REGISTER HERE</Link>
+            <Link to={'/movie-bob/registration'}>REGISTER HERE</Link>
             {authError && <p className="text-danger">{authError.message}</p>}
         </form>
     )

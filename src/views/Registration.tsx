@@ -45,10 +45,10 @@ const Registration2 = (props: RegistrationProps) => {
         e.preventDefault();
         setLocalFormEvent(null);
 
-        if (inputs.password !== inputs.passwordConfirm) {
-            setLocalFormEvent('Passwords dont match.');
-            return;
-        }
+        // if (inputs.password !== inputs.passwordConfirm) {
+        //     setLocalFormEvent('Passwords dont match.');
+        //     return;
+        // }
 
         props.handleRegistration(_getRegistrationData())
     }
@@ -80,7 +80,7 @@ const Registration2 = (props: RegistrationProps) => {
             </div>
             <div className="form-group">
                 <label>Password
-                    <input type="password" className="form-control" placeholder="Confirm Password" value={inputs.passwordConfirm} name="passwordConfirm" onChange={handleChange} />
+                    <input type="text" className="form-control" placeholder="Confirm Password" value={inputs.passwordConfirm} name="passwordConfirm" onChange={handleChange} />
                 </label>
             </div>
             <button type="submit" className="btn btn-primary">REGISTER</button>
